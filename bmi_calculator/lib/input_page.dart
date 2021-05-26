@@ -1,4 +1,5 @@
 import 'package:bmi_calculator/result_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'reusable.dart';
@@ -10,6 +11,9 @@ import 'calculator_Brain.dart';
 int height = 180;
 int weight = 60;
 int age = 20;
+Gender selectedGender;
+Color indicatorColor;
+Icon indicatorGender;
 
 void reset() {
   height = 0;
@@ -27,8 +31,6 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  Gender selectedGender;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,6 +41,15 @@ class _InputPageState extends State<InputPage> {
             color: Color(0xFF21335e),
           ),
         ),
+        actions: <Widget>[
+          Container(
+            child: genderIndicator(),
+            width: 45,
+            margin: EdgeInsets.all(10),
+            decoration:
+                BoxDecoration(color: Color(0xFFaae0fa), shape: BoxShape.circle),
+          )
+        ],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -115,8 +126,9 @@ class _InputPageState extends State<InputPage> {
                     data: SliderTheme.of(context).copyWith(
                       inactiveTrackColor: Color(0xFF8D8E98),
                       activeTrackColor: Colors.white,
-                      thumbColor: Color(0xFFEB1555),
-                      overlayColor: Color(0x29EB1555),
+                      // thumbColor: Color(0xFFEB1555),
+                      thumbColor: Color(0xFF21335e),
+                      overlayColor: Color(0x4021335e),
                       thumbShape:
                           RoundSliderThumbShape(enabledThumbRadius: 15.0),
                       overlayShape:
@@ -249,4 +261,24 @@ class _InputPageState extends State<InputPage> {
       ),
     );
   }
+}
+
+Icon genderIndicator() {
+  if (selectedGender == Gender.male) {
+    indicatorGender = Icon(
+      FontAwesomeIcons.male,
+      size: 35,
+    );
+  } else if (selectedGender == Gender.female) {
+    indicatorGender = Icon(
+      FontAwesomeIcons.female,
+      size: 35,
+    );
+  } else {
+    indicatorGender = Icon(
+      FontAwesomeIcons.stickerMule,
+      size: 27,
+    );
+  }
+  return indicatorGender;
 }

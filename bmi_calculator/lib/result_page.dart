@@ -37,7 +37,7 @@ class _ResultsPageState extends State<ResultsPage> {
             child: Padding(
               padding: const EdgeInsets.only(top: 57),
               child: Text(
-                'BMI calculator',
+                'BMI CALCULATOR',
                 style: TextStyle(
                     color: Color(0xFF21335e),
                     fontSize: 20,
@@ -59,7 +59,7 @@ class _ResultsPageState extends State<ResultsPage> {
           )),
         ),
         Expanded(
-            flex: 5,
+            flex: 7,
             child: ReusableCard(
               colour: kActiveCardColour,
               cardChild: Column(
