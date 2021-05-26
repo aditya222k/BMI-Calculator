@@ -35,19 +35,26 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'BMI CALCULATOR',
-          style: TextStyle(
-            color: Color(0xFF21335e),
+        title: Padding(
+          padding: const EdgeInsets.fromLTRB(25, 0, 0, 0),
+          child: Center(
+            child: Text(
+              'BMI CALCULATOR',
+              style: TextStyle(
+                color: Color(0xFF21335e),
+              ),
+            ),
           ),
         ),
         actions: <Widget>[
-          Container(
-            child: genderIndicator(),
-            width: 45,
-            margin: EdgeInsets.all(10),
-            decoration:
-                BoxDecoration(color: Color(0xFFaae0fa), shape: BoxShape.circle),
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: Container(
+              child: genderIndicator(),
+              width: 36,
+              decoration: BoxDecoration(
+                  color: Color(0xFFaae0fa), shape: BoxShape.circle),
+            ),
           )
         ],
       ),
