@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f53d083d-627a-4f43-9397-62bf05feb811" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/bmi_calculator/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bmi_calculator/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/BMI-Calculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BMI-Calculator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
